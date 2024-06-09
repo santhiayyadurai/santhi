@@ -37,3 +37,42 @@ public class burstballoon {
 
 }
 
+
+
+
+2)Two sum array
+description: they give target and array as the input find out the two element which was equal to the target during addition.
+output:3,5 & 4,4
+
+
+CODE:
+package java2;
+import java.util.*;
+
+public class twosumarray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	     twosumarray t=new twosumarray();
+	     t.start();
+
+	}
+	public void start()
+	{
+		int[]arr= {3,2,5,4,4};
+		int target=8;
+		Map<Integer,Integer> m=new HashMap<>();
+		for(int i=0;i<arr.length;i++)
+		{
+			int diff=target-arr[i];
+			if(m.containsKey(diff))
+			{
+				System.out.println(arr[i]+" "+arr[m.get(diff)]);
+			}
+			m.put(arr[i], i);
+			
+		}
+		
+	}
+
+}
