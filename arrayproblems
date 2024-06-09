@@ -1,1 +1,39 @@
+1) Burst Balloons problem 
+description: first assume 4 arrow need for 4 set array then reducing the arrow if the set is compatible inside another set ex)(4,5) is fit within (3,9),(2,8),(1,6) 
+output:1 arrow enough
+
+CODE::
+package java2;
+public class burstballoon {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+                 burstballoon obj=new burstballoon();
+                 obj.start();
+	}
+	public void start()
+	{
+		int[][] arr= { {3,9},{2,8},{1,6},{4,5}};
+		int arrow=arr.length;
+		System.out.println(arrow);																																																																																								
+		
+		int index=0;
+		while(index<arr.length)
+		{
+		for(int i=0;i<arr.length;i++)
+		{
+			if(i!=index)
+			{
+				if(arr[index][0]>=arr[i][0] && arr[index][1]<=arr[i][1])
+				{
+					arrow--;
+				}
+			}
+	 	}
+		index++;
+		}
+		System.out.println(arrow);
+	}
+
+}
 
